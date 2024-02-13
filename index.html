@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marry Wishes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/mainpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.js"></script>
+</head>
+<style>
+    * {
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+    }
+
+    /* .body{
+    background-image: url("/images/flowerbackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    
+} */
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .outerdiv {
+        background-image: url("/images/flowerbackground.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(242,
+                243,
+                244);
+        position: relative;
+    }
+
+    .image_container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* border:2px solid honeydew;  */
+        border-radius: 3px;
+        width: 80%;
+        height: 93%;
+    }
+
+    .image_container img {
+        object-fit: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        /* border: 3px solid #e5e7e9 ; */
+        /* box-shadow: 14px 10px 15px 5px rgb(0 0 0 / 60%); */
+        /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+        /* box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.33) 10px 10px 10px 10px; */
+    }
+
+
+    .alignment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* .choggosdetails{
+    height: auto;
+    width: 100%;
+    color: gray;
+    font-size: 1.5vw;
+    background-color: #000;
+} */
+    /* .footer-content{
+    width: 96%;
+    margin: 1% auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:3rem;
+    height:auto;
+}
+.first-section{
+    width: 100%;
+    height: 20vh;
+    margin: 1% auto;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
+    background-color: #191c24;
+}
+.second-section{
+    width: 100%;
+    height: 20vh;
+    margin: 1% auto;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 4px;
+    background-color: #191c24;
+    
+}
+.first-section h4, .second-section h4 {
+    color: #F0F3F4;
+}
+.third-section{
+    width: 100%;
+}
+.first-section, .second-section, .third-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8%;
+    cursor: pointer;
+}
+.fa-face-smile, .fa-face-smile-beam, .fa-phone{
+    font-size: 4rem;
+    color: #6699cc;
+} */
+    .showtext {
+        position: absolute;
+        bottom: 4%;
+        left: 2%;
+        font-size: 5vw;
+        color: teal;
+        background-image: linear-gradient(-225deg,
+                rgb(240, 78, 78) 30%,
+                hotpink 100%);
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+        font-size: 5vw;
+    }
+
+    @keyframes textclip {
+        to {
+            background-position: 200% center;
+        }
+    }
+
+    /* .details{
+    height: 5vh;
+    width: 100vw;
+    background-color: rgb(234, 150, 163);
+    justify-content: left
+
+} */
+    /* .text{
+    padding-left: 10%;
+    font-size: 1.4vw
+} */
+
+    .audiotag {
+        position: absolute;
+        bottom: 6%;
+        right: 2%;
+    }
+
+    .name {
+        font-size: 2.3rem;
+        color: red;
+        position: absolute;
+        bottom: 15%;
+        left: 2.2%;
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+    }
+
+    @media(max-width:700px) {
+        .showtext {
+            font-size: 2.8rem;
+            top: 64%;
+            left: 3%;
+        }
+
+        .name {
+            top: 59%;
+            font-size: 2rem;
+            color: brown;
+            left: 20%;
+        }
+
+        .audiotag {
+            width: 30vw;
+        }
+
+        .image_container {
+            margin-top: -10%;
+            height: 35vh;
+            width: 100vw;
+        }
+
+        .imagess {
+            height: 100%;
+            object-fit: contain;
+            overflow: hidden;
+            background-position: center;
+            animation: slide 1 s infinite;
+
+        }
+
+        @keyframes slide {
+            from {
+                /* opacity: .3; */
+                transition: ease-in;
+            }
+
+            to {
+                /* opacity: 1; */
+                transition: ease-in-out;
+            }
+        }
+
+        /* .image_container{
+        height: 40%;
+        width: 95%;
+        border: none;
+    }
+
+    .imagess{
+        height: 100%;
+    } */
+        /* img{
+    border: 3px solid #f4f8f9;
+  } */
+        /* .image_container img, .imagess{
+        background-position: center;
+        background-repeat: no-repeat;  
+        background-size: cover; 
+   
+        border: 3px solid #E5E7E9 ;
+    } */
+
+        /* #img{
+        object-fit: contain;
+        overflow: hidden;
+        background-position: center;
+    }
+
+    .image_container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border:4px solid #f5f7f9; 
+        border-radius: 3px;
+        width: 60%;
+        height: 93%;
+    } */
+    }
+
+    @media(max-width:450px) {
+        .imagess {
+            width: 100%;
+            object-fit: contain;
+            overflow: hidden;
+            background-position: center;
+        }
+
+        .image_container {
+            margin-top: -7%;
+            top: 38%;
+            height: 45vh;
+            width: 99vw;
+
+        }
+    }
+
+    .imagess {
+        height: 100%;
+        object-fit: contain;
+        overflow: hidden;
+        background-position: center;
+    }
+
+    .slider {
+        width: 90%;
+        height: 50%;
+        box-sizing: border-box;
+        box-shadow: 1px 1px 2px 1px lightgray;
+        margin: 20px auto;
+    }
+
+    #img {
+        object-fit: contain;
+        overflow: hidden;
+        background-position: center;
+    }
+
+    @keyframes animate {
+        0% {
+            opacity: .4;
+        }
+
+        50% {
+            opacity: .8;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    #confetti {
+        height: 100%;
+        left: 0px;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        z-index: 999;
+    }
+
+    .animation {
+        transition: all 0.3s linear ease-in;
+        animation: imageanimation ease-out all 2s;
+        transition-timing-function: ease;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes imageanimation {
+        0% {
+            opacity: .4;
+        }
+
+        50% {
+            opacity: .8;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="outerdiv">
+
+        <div id="confetti"></div>
+        <div class="image_container" id="img">
+            <img alt="" src="/logo.jpg" class="imagess" id="changesrc">
+        </div>
+        <div class="showtextcontainer">
+            <h2 class="name showtext">Aditya & Guriya</h2>
+            <h2 class="showtext">Happy Married Life</h2>
+        </div>
+        <audio controls class="audiotag" id="audiotag" style="z-index: 100000;" autoplay="true">
+            <source src="/images/all-our-memories-125893.mp3" type="audio/mp3">
+
+        </audio>
+    </div>
+    <!-- <div class="choggosdetails">
+    <div class="footer-content">
+      <div class="second-section ">
+        <i class="fa-solid fa-globe"></i>       
+        <i class="fa-sharp fa-solid fa-face-smile"></i>
+         <h4>Wishing you Happy Married Life.</h4>
+      </div>
+      <div class="first-section">
+        <i class="fa-solid fa-envelope"></i>
+        <i class="fa-solid fa-face-smile-beam"></i>
+        <h4>Amrita and Praveen</h4>
+      </div>
+    </div>
+  </div> -->
+    <!--  -->
+
+</body>
+<script>
+    // window.onload=function(){
+    // console.log("called");
+
+    //  document.getElementById("demo").innerHTML=x;
+    // }
+    // playMusic();
+    // window.onload()=plyaMusic();
+
+    // }
+    // function playMusic(){
+    //   console.log("called");
+    //   let audio = new Audio("/images/all-our-memories-125893.mp3");
+    //   audio.play();
+    // }
+    // window.addEventListener('onload', playMusic);
+    let img = document.getElementById('img');
+    let images = [
+
+        // '/images/marriage1.png',
+
+        '/img/ASHISH.jpeg',
+
+        '/img/chiggoslogo.png',
+
+        '/img/download.png',
+
+        '/img/logo.jpg'
+
+
+
+    ];
+    var x = 0;
+    function slider() {
+        if (x < images.length) {
+            x = x + 1;
+        }
+        else {
+            x = 1;
+        }
+
+        let changesrc = document.getElementById('changesrc');
+        changesrc.src = `${images[x - 1]}`
+        // img.innerHTML = "<img class='imagess' src=" + images[x - 1] + ">";
+    }
+
+    setInterval(slider, 3000);
+
+
+    // * Confetti by Patrik Svensson (http://metervara.net) */
+    $(document).ready(function () {
+        var frameRate = 30;
+        var dt = 1.0 / frameRate;
+        var DEG_TO_RAD = Math.PI / 180;
+        var RAD_TO_DEG = 180 / Math.PI;
+        var colors = [
+            ["#df0049", "#660671"],
+            ["#00e857", "#005291"],
+            ["#2bebbc", "#05798a"],
+            ["#ffd200", "#b06c00"]
+        ];
+
+        function Vector2(_x, _y) {
+            this.x = _x, this.y = _y;
+            this.Length = function () {
+                return Math.sqrt(this.SqrLength());
+            }
+            this.SqrLength = function () {
+                return this.x * this.x + this.y * this.y;
+            }
+            this.Equals = function (_vec0, _vec1) {
+                return _vec0.x == _vec1.x && _vec0.y == _vec1.y;
+            }
+            this.Add = function (_vec) {
+                this.x += _vec.x;
+                this.y += _vec.y;
+            }
+            this.Sub = function (_vec) {
+                this.x -= _vec.x;
+                this.y -= _vec.y;
+            }
+            this.Div = function (_f) {
+                this.x /= _f;
+                this.y /= _f;
+            }
+            this.Mul = function (_f) {
+                this.x *= _f;
+                this.y *= _f;
+            }
+            this.Normalize = function () {
+                var sqrLen = this.SqrLength();
+                if (sqrLen != 0) {
+                    var factor = 1.0 / Math.sqrt(sqrLen);
+                    this.x *= factor;
+                    this.y *= factor;
+                }
+            }
+            this.Normalized = function () {
+                var sqrLen = this.SqrLength();
+                if (sqrLen != 0) {
+                    var factor = 1.0 / Math.sqrt(sqrLen);
+                    return new Vector2(this.x * factor, this.y * factor);
+                }
+                return new Vector2(0, 0);
+            }
+        }
+        Vector2.Lerp = function (_vec0, _vec1, _t) {
+            return new Vector2((_vec1.x - _vec0.x) * _t + _vec0.x, (_vec1.y - _vec0.y) * _t + _vec0.y);
+        }
+        Vector2.Distance = function (_vec0, _vec1) {
+            return Math.sqrt(Vector2.SqrDistance(_vec0, _vec1));
+        }
+        Vector2.SqrDistance = function (_vec0, _vec1) {
+            var x = _vec0.x - _vec1.x;
+            var y = _vec0.y - _vec1.y;
+            return (x * x + y * y + z * z);
+        }
+        Vector2.Scale = function (_vec0, _vec1) {
+            return new Vector2(_vec0.x * _vec1.x, _vec0.y * _vec1.y);
+        }
+        Vector2.Min = function (_vec0, _vec1) {
+            return new Vector2(Math.min(_vec0.x, _vec1.x), Math.min(_vec0.y, _vec1.y));
+        }
+        Vector2.Max = function (_vec0, _vec1) {
+            return new Vector2(Math.max(_vec0.x, _vec1.x), Math.max(_vec0.y, _vec1.y));
+        }
+        Vector2.ClampMagnitude = function (_vec0, _len) {
+            var vecNorm = _vec0.Normalized;
+            return new Vector2(vecNorm.x * _len, vecNorm.y * _len);
+        }
+        Vector2.Sub = function (_vec0, _vec1) {
+            return new Vector2(_vec0.x - _vec1.x, _vec0.y - _vec1.y, _vec0.z - _vec1.z);
+        }
+
+        function EulerMass(_x, _y, _mass, _drag) {
+            this.position = new Vector2(_x, _y);
+            this.mass = _mass;
+            this.drag = _drag;
+            this.force = new Vector2(0, 0);
+            this.velocity = new Vector2(0, 0);
+            this.AddForce = function (_f) {
+                this.force.Add(_f);
+            }
+            this.Integrate = function (_dt) {
+                var acc = this.CurrentForce(this.position);
+                acc.Div(this.mass);
+                var posDelta = new Vector2(this.velocity.x, this.velocity.y);
+                posDelta.Mul(_dt);
+                this.position.Add(posDelta);
+                acc.Mul(_dt);
+                this.velocity.Add(acc);
+                this.force = new Vector2(0, 0);
+            }
+            this.CurrentForce = function (_pos, _vel) {
+                var totalForce = new Vector2(this.force.x, this.force.y);
+                var speed = this.velocity.Length();
+                var dragVel = new Vector2(this.velocity.x, this.velocity.y);
+                dragVel.Mul(this.drag * this.mass * speed);
+                totalForce.Sub(dragVel);
+                return totalForce;
+            }
+        }
+
+        function ConfettiPaper(_x, _y) {
+            this.pos = new Vector2(_x, _y);
+            this.rotationSpeed = Math.random() * 600 + 800;
+            this.angle = DEG_TO_RAD * Math.random() * 360;
+            this.rotation = DEG_TO_RAD * Math.random() * 360;
+            this.cosA = 1.0;
+            this.size = 5.0;
+            this.oscillationSpeed = Math.random() * 1.5 + 0.5;
+            this.xSpeed = 40.0;
+            this.ySpeed = Math.random() * 60 + 50.0;
+            this.corners = new Array();
+            this.time = Math.random();
+            var ci = Math.round(Math.random() * (colors.length - 1));
+            this.frontColor = colors[ci][0];
+            this.backColor = colors[ci][1];
+            for (var i = 0; i < 4; i++) {
+                var dx = Math.cos(this.angle + DEG_TO_RAD * (i * 90 + 45));
+                var dy = Math.sin(this.angle + DEG_TO_RAD * (i * 90 + 45));
+                this.corners[i] = new Vector2(dx, dy);
+            }
+            this.Update = function (_dt) {
+                this.time += _dt;
+                this.rotation += this.rotationSpeed * _dt;
+                this.cosA = Math.cos(DEG_TO_RAD * this.rotation);
+                this.pos.x += Math.cos(this.time * this.oscillationSpeed) * this.xSpeed * _dt
+                this.pos.y += this.ySpeed * _dt;
+                if (this.pos.y > ConfettiPaper.bounds.y) {
+                    this.pos.x = Math.random() * ConfettiPaper.bounds.x;
+                    this.pos.y = 0;
+                }
+            }
+            this.Draw = function (_g) {
+                if (this.cosA > 0) {
+                    _g.fillStyle = this.frontColor;
+                } else {
+                    _g.fillStyle = this.backColor;
+                }
+                _g.beginPath();
+                _g.moveTo(this.pos.x + this.corners[0].x * this.size, this.pos.y + this.corners[0].y * this.size * this.cosA);
+                for (var i = 1; i < 4; i++) {
+                    _g.lineTo(this.pos.x + this.corners[i].x * this.size, this.pos.y + this.corners[i].y * this.size * this.cosA);
+                }
+                _g.closePath();
+                _g.fill();
+            }
+        }
+        ConfettiPaper.bounds = new Vector2(0, 0);
+
+        function ConfettiRibbon(_x, _y, _count, _dist, _thickness, _angle, _mass, _drag) {
+            this.particleDist = _dist;
+            this.particleCount = _count;
+            this.particleMass = _mass;
+            this.particleDrag = _drag;
+            this.particles = new Array();
+            var ci = Math.round(Math.random() * (colors.length - 1));
+            this.frontColor = colors[ci][0];
+            this.backColor = colors[ci][1];
+            this.xOff = Math.cos(DEG_TO_RAD * _angle) * _thickness;
+            this.yOff = Math.sin(DEG_TO_RAD * _angle) * _thickness;
+            this.position = new Vector2(_x, _y);
+            this.prevPosition = new Vector2(_x, _y);
+            this.velocityInherit = Math.random() * 2 + 4;
+            this.time = Math.random() * 100;
+            this.oscillationSpeed = Math.random() * 2 + 2;
+            this.oscillationDistance = Math.random() * 40 + 40;
+            this.ySpeed = Math.random() * 40 + 80;
+            for (var i = 0; i < this.particleCount; i++) {
+                this.particles[i] = new EulerMass(_x, _y - i * this.particleDist, this.particleMass, this.particleDrag);
+            }
+            this.Update = function (_dt) {
+                var i = 0;
+                this.time += _dt * this.oscillationSpeed;
+                this.position.y += this.ySpeed * _dt;
+                this.position.x += Math.cos(this.time) * this.oscillationDistance * _dt;
+                this.particles[0].position = this.position;
+                var dX = this.prevPosition.x - this.position.x;
+                var dY = this.prevPosition.y - this.position.y;
+                var delta = Math.sqrt(dX * dX + dY * dY);
+                this.prevPosition = new Vector2(this.position.x, this.position.y);
+                for (i = 1; i < this.particleCount; i++) {
+                    var dirP = Vector2.Sub(this.particles[i - 1].position, this.particles[i].position);
+                    dirP.Normalize();
+                    dirP.Mul((delta / _dt) * this.velocityInherit);
+                    this.particles[i].AddForce(dirP);
+                }
+                for (i = 1; i < this.particleCount; i++) {
+                    this.particles[i].Integrate(_dt);
+                }
+                for (i = 1; i < this.particleCount; i++) {
+                    var rp2 = new Vector2(this.particles[i].position.x, this.particles[i].position.y);
+                    rp2.Sub(this.particles[i - 1].position);
+                    rp2.Normalize();
+                    rp2.Mul(this.particleDist);
+                    rp2.Add(this.particles[i - 1].position);
+                    this.particles[i].position = rp2;
+                }
+                if (this.position.y > ConfettiRibbon.bounds.y + this.particleDist * this.particleCount) {
+                    this.Reset();
+                }
+            }
+            this.Reset = function () {
+                this.position.y = -Math.random() * ConfettiRibbon.bounds.y;
+                this.position.x = Math.random() * ConfettiRibbon.bounds.x;
+                this.prevPosition = new Vector2(this.position.x, this.position.y);
+                this.velocityInherit = Math.random() * 2 + 4;
+                this.time = Math.random() * 100;
+                this.oscillationSpeed = Math.random() * 2.0 + 1.5;
+                this.oscillationDistance = Math.random() * 40 + 40;
+                this.ySpeed = Math.random() * 40 + 80;
+                var ci = Math.round(Math.random() * (colors.length - 1));
+                this.frontColor = colors[ci][0];
+                this.backColor = colors[ci][1];
+                this.particles = new Array();
+                for (var i = 0; i < this.particleCount; i++) {
+                    this.particles[i] = new EulerMass(this.position.x, this.position.y - i * this.particleDist, this.particleMass, this.particleDrag);
+                }
+            }
+            this.Draw = function (_g) {
+                for (var i = 0; i < this.particleCount - 1; i++) {
+                    var p0 = new Vector2(this.particles[i].position.x + this.xOff, this.particles[i].position.y + this.yOff);
+                    var p1 = new Vector2(this.particles[i + 1].position.x + this.xOff, this.particles[i + 1].position.y + this.yOff);
+                    if (this.Side(this.particles[i].position.x, this.particles[i].position.y, this.particles[i + 1].position.x, this.particles[i + 1].position.y, p1.x, p1.y) < 0) {
+                        _g.fillStyle = this.frontColor;
+                        _g.strokeStyle = this.frontColor;
+                    } else {
+                        _g.fillStyle = this.backColor;
+                        _g.strokeStyle = this.backColor;
+                    }
+                    if (i == 0) {
+                        _g.beginPath();
+                        _g.moveTo(this.particles[i].position.x, this.particles[i].position.y);
+                        _g.lineTo(this.particles[i + 1].position.x, this.particles[i + 1].position.y);
+                        _g.lineTo((this.particles[i + 1].position.x + p1.x) * 0.5, (this.particles[i + 1].position.y + p1.y) * 0.5);
+                        _g.closePath();
+                        _g.stroke();
+                        _g.fill();
+                        _g.beginPath();
+                        _g.moveTo(p1.x, p1.y);
+                        _g.lineTo(p0.x, p0.y);
+                        _g.lineTo((this.particles[i + 1].position.x + p1.x) * 0.5, (this.particles[i + 1].position.y + p1.y) * 0.5);
+                        _g.closePath();
+                        _g.stroke();
+                        _g.fill();
+                    } else if (i == this.particleCount - 2) {
+                        _g.beginPath();
+                        _g.moveTo(this.particles[i].position.x, this.particles[i].position.y);
+                        _g.lineTo(this.particles[i + 1].position.x, this.particles[i + 1].position.y);
+                        _g.lineTo((this.particles[i].position.x + p0.x) * 0.5, (this.particles[i].position.y + p0.y) * 0.5);
+                        _g.closePath();
+                        _g.stroke();
+                        _g.fill();
+                        _g.beginPath();
+                        _g.moveTo(p1.x, p1.y);
+                        _g.lineTo(p0.x, p0.y);
+                        _g.lineTo((this.particles[i].position.x + p0.x) * 0.5, (this.particles[i].position.y + p0.y) * 0.5);
+                        _g.closePath();
+                        _g.stroke();
+                        _g.fill();
+                    } else {
+                        _g.beginPath();
+                        _g.moveTo(this.particles[i].position.x, this.particles[i].position.y);
+                        _g.lineTo(this.particles[i + 1].position.x, this.particles[i + 1].position.y);
+                        _g.lineTo(p1.x, p1.y);
+                        _g.lineTo(p0.x, p0.y);
+                        _g.closePath();
+                        _g.stroke();
+                        _g.fill();
+                    }
+                }
+            }
+            this.Side = function (x1, y1, x2, y2, x3, y3) {
+                return ((x1 - x2) * (y3 - y2) - (y1 - y2) * (x3 - x2));
+            }
+        }
+        ConfettiRibbon.bounds = new Vector2(0, 0);
+        confetti = {};
+        confetti.Context = function (parent) {
+            var i = 0;
+            var canvasParent = document.getElementById(parent);
+            var canvas = document.createElement('canvas');
+            canvas.width = canvasParent.offsetWidth;
+            canvas.height = canvasParent.offsetHeight;
+            canvasParent.appendChild(canvas);
+            var context = canvas.getContext('2d');
+            var interval = null;
+            var confettiRibbonCount = 7;
+            var rpCount = 30;
+            var rpDist = 8.0;
+            var rpThick = 8.0;
+            var confettiRibbons = new Array();
+            ConfettiRibbon.bounds = new Vector2(canvas.width, canvas.height);
+            for (i = 0; i < confettiRibbonCount; i++) {
+                confettiRibbons[i] = new ConfettiRibbon(Math.random() * canvas.width, -Math.random() * canvas.height * 2, rpCount, rpDist, rpThick, 45, 1, 0.05);
+            }
+            var confettiPaperCount = 25;
+            var confettiPapers = new Array();
+            ConfettiPaper.bounds = new Vector2(canvas.width, canvas.height);
+            for (i = 0; i < confettiPaperCount; i++) {
+                confettiPapers[i] = new ConfettiPaper(Math.random() * canvas.width, Math.random() * canvas.height);
+            }
+            this.resize = function () {
+                canvas.width = canvasParent.offsetWidth;
+                canvas.height = canvasParent.offsetHeight;
+                ConfettiPaper.bounds = new Vector2(canvas.width, canvas.height);
+                ConfettiRibbon.bounds = new Vector2(canvas.width, canvas.height);
+            }
+            this.start = function () {
+                this.stop()
+                var context = this
+                this.interval = setInterval(function () {
+                    confetti.update();
+                }, 1000.0 / frameRate)
+            }
+            this.stop = function () {
+                clearInterval(this.interval);
+            }
+            this.update = function () {
+                var i = 0;
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                for (i = 0; i < confettiPaperCount; i++) {
+                    confettiPapers[i].Update(dt);
+                    confettiPapers[i].Draw(context);
+                }
+                for (i = 0; i < confettiRibbonCount; i++) {
+                    confettiRibbons[i].Update(dt);
+                    confettiRibbons[i].Draw(context);
+                }
+            }
+        }
+        var confetti = new confetti.Context('confetti');
+        confetti.start();
+        $(window).resize(function () {
+            confetti.resize();
+        });
+    });
+    let audioplay = document.getElementById("audiotag")
+    audioplay.play();
+</script>
+
+</html>
