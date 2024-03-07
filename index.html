@@ -19,7 +19,7 @@
         padding: 0%;
         margin: 0%;
         box-sizing: border-box;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 
     body {
@@ -497,8 +497,7 @@
             </style>
         </div>
         <div class="image_container" id="img" style="">
-            <img alt="" src="C:\Users\Vidyavyukta\Desktop\wishes\wedding_wish\scHpNa.jpg" class="imagess"
-                id="changesrc">
+            <img alt="" src="1.jpeg" class="imagess" id="changesrc">
         </div>
         <div class="showtextcontainer">
             <h2 class="name showtext text1"
@@ -514,9 +513,33 @@
                 Wishing You a Happy Married Life....
             </h2>
         </div>
-        <audio controls class="audiotag" id="audiotag" style="z-index: 100000;" autoplay="true">
-            <source src="/img/videoplayback.m4a" type="audio/mp3">
-        </audio>
+        <!-- <audio controls class="audiotag" id="audiotag" style="z-index: 100000;" autoplay>
+            <source src="Anniversary Song _ Anniversary Status_ Shaadi ki saalgira_.mp3" type="audio/mp3">
+        </audio> -->
+        <!-- <audio class="audiotag" style="z-index: 100000;" controls autoplay muted
+            src="Anniversary Song _ Anniversary Status_ Shaadi ki saalgira_.mp3"></audio> -->
+        <script>
+            // Get the button element
+            const playBtn = document.getElementById('playBtn');
+
+            // Function to play audio
+            function playAudio() {
+                // Create an audio element
+                const audio = new Audio('Anniversary Song _ Anniversary Status_ Shaadi ki saalgira_.mp3');
+
+                // Play the audio
+                audio.play();
+            }
+
+            // Add click event listener to the button
+            window.addEventListener('onload', playAudio);
+
+            // </script>
+        <!-- <audio id="audiotag" class="audiotag" style="z-index: 100000;" controls>
+            
+            <source src="Anniversary Song _ Anniversary Status_ Shaadi ki saalgira_.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>        -->
     </div>
 
 </body>
@@ -651,14 +674,14 @@
 
         // '/images/marriage1.png',
 
-        'ASHISH.jpeg',
+        '1.jpeg',
 
-        './img/chiggoslogo.png',
+        '2.jpeg',
 
-        '/img/download.png',
+        '3.jpeg',
 
-        '/img/logo.jpg'
-
+        '4.jpeg',
+        '5.jpeg',
 
 
     ];
